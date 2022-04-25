@@ -28,27 +28,70 @@ namespace ListTask1
             //Console.ReadKey();
 
             // задача 2
-            Console.WriteLine("Введите количество строк: ");
-            int K = int.Parse(Console.ReadLine());
-            List<string> listSentences = new List<string>(K);
-            for (int i = 0; i < K; i++)
+            //Console.WriteLine("Введите количество строк: ");
+            //int K = int.Parse(Console.ReadLine());
+            //List<string> listSentences = new List<string>(K);
+            //for (int i = 0; i < K; i++)
+            //{
+            //    listSentences.Add(Console.ReadLine());
+            //}
+            //Console.WriteLine("Введите поисковое слово: ");
+            //string wordSearch = Console.ReadLine();
+            //Console.WriteLine("Результаты поиска: ");
+            //List<string> listFinded = listSentences.FindAll(p => p.Contains(wordSearch));
+            //if (listFinded.Count > 0)
+            //    PrintList(listFinded);
+            //else
+            //    Console.WriteLine("По вашему запросу ничего не нашлось");
+            //Console.ReadKey();
+            //задача 3
+            //Console.WriteLine("Введите количество строк: ");
+            //int M = int.Parse(Console.ReadLine());
+            //List<string> listStrings = new List<string>(M);
+            //for (int i = 0; i < M; i++)
+            //{
+            //    listStrings.Add(Console.ReadLine());
+            //}
+            //Console.WriteLine("Введите номер символа: ");
+            //int numberSimbol = int.Parse(Console.ReadLine());
+            //string abbreviature = "";
+            //foreach(string line in listStrings)
+            //{
+            //    if (line.Length >= numberSimbol)
+            //        abbreviature += line[numberSimbol - 1];
+            //    else
+            //        abbreviature += '_';
+            //}
+            //Console.WriteLine($"Полученное слово: {abbreviature}");
+            //Console.ReadKey();
+            //задача 5
+            Console.WriteLine("Введите количество клиентов банка: ");
+            int N = int.Parse(Console.ReadLine());
+            List<int> listClients = new List<int>(N);
+            for (int i = 0; i < N; i++)
             {
-                listSentences.Add(Console.ReadLine());
+                listClients.Add(int.Parse(Console.ReadLine()));
             }
-            Console.WriteLine("Введите поисковое слово: ");
-            string wordSearch = Console.ReadLine();
-            Console.WriteLine("Результаты поиска: ");
-            List<string> listFinded = listSentences.FindAll(p => p.Contains(wordSearch));
-            if (listFinded.Count > 0)
-                PrintList(listFinded);
-            else
-                Console.WriteLine("По вашему запросу ничего не нашлось");
+            Console.WriteLine("Исходные вложения");
+            PrintList(listClients);
+            Console.WriteLine("Накопления через год");
+            foreach(int l in listClients)
+            {
+                Console.WriteLine(l * 3);
+            }
             Console.ReadKey();
         }
 
-        private static void PrintList(List<string> listBuy)
+        private static void PrintList(List<string> list)
         {
-            foreach (string buy in listBuy)
+            foreach (string buy in list)
+            {
+                Console.WriteLine(buy);
+            }
+        }
+        private static void PrintList(List<int> list)
+        {
+            foreach (int buy in list)
             {
                 Console.WriteLine(buy);
             }
