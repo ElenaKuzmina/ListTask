@@ -74,10 +74,14 @@ namespace ListTask1
             }
             Console.WriteLine("Исходные вложения");
             PrintList(listClients);
+            Console.WriteLine(listClients.Sum()); //сумма
+            Console.WriteLine(listClients.Average()); //среднее ариф
+            Console.WriteLine(listClients.Min()); // минимум
+            Console.WriteLine(listClients.Max()); //максимум
             Console.WriteLine("Накопления через год");
-            foreach(int l in listClients)
+            foreach(int client in listClients)
             {
-                Console.WriteLine(l * 3);
+                Console.WriteLine(client * 3);
             }
             Console.ReadKey();
         }
