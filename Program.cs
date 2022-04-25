@@ -84,6 +84,21 @@ namespace ListTask1
                 Console.WriteLine(client * 3);
             }
             Console.ReadKey();
+           
+            //задача 6 способ 1
+            int P = 2;
+            int Q = 4;
+            int summa = 0;
+            for (int i = P-1; i <= Q-1; i++)
+                summa += listClients[i];
+            Console.WriteLine(summa);
+
+            //задача 6 способ 2
+            
+            Console.WriteLine(listClients.GetRange(P - 1, Q - P + 1).Sum());
+
+            Console.ReadKey();
+
         }
 
         private static void PrintList(List<string> list)
